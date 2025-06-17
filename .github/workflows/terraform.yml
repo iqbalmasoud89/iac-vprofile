@@ -19,15 +19,15 @@ jobs:
 
   
 
-      - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v2
-        with:
-          terraform_version: 1.6.3
+  - name: Set up Terraform
+    uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: 1.6.3
 
-      - name: Terraform Init
-        run: terraform -chdir=terraform init
+  - name: Terraform Init
+    run: terraform -chdir=terraform init
 
-      - name: Terraform Validate
-        run: terraform -chdir=terraform validate
+  - name: Terraform Validate
+    run: terraform -chdir=terraform validate
 
       # Add more steps as needed (plan, apply, etc.)
